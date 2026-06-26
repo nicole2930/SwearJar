@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\nicol\\\\Documents\\\\SwearJar\" -Force | Select-Object Name, @{Name=\"Type\"; Expression={if\\($_.PSIsContainer\\) { \"DIR\" } else { \"FILE\" }}} | Format-Table -AutoSize)",
+      "PowerShell(\\(Get-ChildItem -Path \"C:\\\\Users\\\\nicol\\\\Documents\\\\SwearJar\" -Force -Recurse | Measure-Object\\).Count)",
+      "Bash(dir \"C:\\\\Users\\\\nicol\\\\Documents\\\\SwearJar\")"
+    ]
+  }
+}
